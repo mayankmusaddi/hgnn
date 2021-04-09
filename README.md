@@ -1,7 +1,7 @@
 # ML4NS Project
 
 
-## Dataset
+## Datasets
 
 - Ligand-Receptor Pair Database
 - SeqFish+ Transcriptomics data
