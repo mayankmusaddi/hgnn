@@ -72,11 +72,11 @@ g = nx.Graph()
 
 cd = pd.read_csv('seqfish_plus/ge_withlabels.csv')
 am = np.load('seqfish_plus/adjacency_matrix.npy')
+dt = {'Astrocyte' : 0, 'Choroid Plexus' : 1, 'Endothelial' : 2, 'Ependymal' : 3, 'Excitatory neuron' : 4, 'Interneuron' : 5, 'Microglia' : 6, 'Neural Stem' : 7, 'Neuroblast' : 8, 'Oligodendrocyte' : 9 }
 
 for i in range(cd.shape[0]):
     row = np.array(cd.iloc[i])
-    g.add_node(i,features=row[:-1],label=row[-1])
-
+    g.add_node(i,features=row[:-1],label=dt[row[-1]])
 for i in range(am.shape[0]):
     for j in range(am.shape[1]):
         if am[i][j] == 1:
@@ -84,3 +84,5 @@ for i in range(am.shape[0]):
 
 print(g.number_of_nodes())
 print(g.number_of_edges())
+
+nx.write_gpickle(g, 'gen.gpickle')
