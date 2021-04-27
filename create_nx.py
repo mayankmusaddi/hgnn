@@ -85,4 +85,5 @@ for i in range(am.shape[0]):
 print(g.number_of_nodes())
 print(g.number_of_edges())
 
+nx.write_gpickle(g, "./general.gpickle")
 nx.write_gpickle(g, 'gen.gpickle')
