@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 seqfish_plus
+osmfish
+merfish
+gen.pickle
 # Distribution / packaging
 .Python
 build/
