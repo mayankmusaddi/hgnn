@@ -16,6 +16,7 @@ t = np.array([dt[x] for x in labels])
 
 X = np.load('/home/anant/precog/hyp/Hyperbolic-GNNs/embeddings/embeddings.npy')
 # X = np.zeros((913,4))
+
 print(X.shape)
 print(X[692])
 
@@ -40,4 +41,5 @@ for g in np.unique(t):
 # ax.scatter(embeddingsdf.x, embeddingsdf.y, alpha=.5, c=t)
 # ax.scatter(X[:,2], X[:,10], alpha=.5, c=t)
 plt.title('t-SNE Scatter-Plot')
+
 plt.show()
